@@ -22,7 +22,7 @@ export class LinkedList<T> implements Iterable<T> {
    * Insert a node at the end of the list
    * @param item
    */
-  append(item: T) {
+  public append(item: T) {
     const node: LinkedListNode<T> = new LinkedListNode(item);
 
     if (this.tail) {
@@ -38,7 +38,7 @@ export class LinkedList<T> implements Iterable<T> {
    * Insert a node at the beginning of the list
    * @param item
    */
-  prepend(item: T) {
+  public prepend(item: T) {
     const node: LinkedListNode<T> = new LinkedListNode(item, this.head);
 
     this.head = node;
@@ -51,7 +51,7 @@ export class LinkedList<T> implements Iterable<T> {
   /**
    * Remove a node
    */
-  delete(item: T) {
+  public delete(item: T) {
     if (!this.head) {
       return;
     }
@@ -85,7 +85,7 @@ export class LinkedList<T> implements Iterable<T> {
   /**
    * Delete the first node
    */
-  deleteHead(): T {
+  public deleteHead(): T {
     if (!this.head) {
       return null;
     }
@@ -104,7 +104,7 @@ export class LinkedList<T> implements Iterable<T> {
   /**
    * Delete the last node
    */
-  deleteTail(): T {
+  public deleteTail(): T {
     if (!this.head) {
       return null;
     }
@@ -135,15 +135,15 @@ export class LinkedList<T> implements Iterable<T> {
   /**
    * Iterate through the list
    */
-  [Symbol.iterator](): Iterator<T> {
+  public [Symbol.iterator](): Iterator<T> {
     let currentNode: LinkedListNode<T> = this.head;
 
     return {
       next() {
         if (currentNode) {
           const result = {
-            value: currentNode.value,
             done: false,
+            value: currentNode.value,
           };
 
           currentNode = currentNode.next;
@@ -151,8 +151,8 @@ export class LinkedList<T> implements Iterable<T> {
           return result;
         } else {
           return {
-            value: null,
             done: true,
+            value: null,
           };
         }
       },
