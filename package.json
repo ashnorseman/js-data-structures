@@ -1,0 +1,29 @@
+{
+  "name": "js-data-structures",
+  "version": "1.0.0",
+  "description": "Javascript data structures",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepublishOnly" : "npm test && npm run lint",
+    "prepare" : "npm run build",
+    "test": "jest --useStderr --watchAll --config jestconfig.json"
+  },
+  "keywords": [
+    "data-structure"
+  ],
+  "author": "Ash Zhang",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^23.3.3",
+    "jest": "^23.6.0",
+    "prettier": "^1.14.3",
+    "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^3.1.1"
+  }
+}

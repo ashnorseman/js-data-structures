@@ -1,0 +1,6 @@
+src
+.editorconfig
+.prettierrc
+jestconfig.json
+tsconfig.json
+tslint.json
