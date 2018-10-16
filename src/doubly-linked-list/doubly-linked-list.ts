@@ -19,6 +19,20 @@ export class DoublyLinkedList<T> implements Iterable<T> {
   }
 
   /**
+   * First node
+   */
+  public getHead(): T {
+    return this.head.value;
+  }
+
+  /**
+   * Last node
+   */
+  public getTail(): T {
+    return this.tail.value;
+  }
+
+  /**
    * Insert a node at the end of the list
    * @param item
    */

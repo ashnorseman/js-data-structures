@@ -1,6 +1,6 @@
 {
   "name": "ash-js-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript data structures",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -8,9 +8,10 @@
     "build": "rm -rf lib && tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "prepublishOnly" : "npm test && npm run lint",
+    "prepublishOnly" : "npm testOnce && npm run lint",
     "prepare" : "npm run build",
-    "test": "jest --useStderr --watchAll --config jestconfig.json"
+    "test": "jest --useStderr --watchAll --config jestconfig.json",
+    "testOnce": "jest --config jestconfig.json"
   },
   "keywords": [
     "data-structure"
