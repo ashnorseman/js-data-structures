@@ -22,14 +22,14 @@ export class DoublyLinkedList<T> implements Iterable<T> {
    * First node
    */
   public getHead(): T {
-    return this.head.value;
+    return this.head && this.head.value;
   }
 
   /**
    * Last node
    */
   public getTail(): T {
-    return this.tail.value;
+    return this.tail && this.tail.value;
   }
 
   /**
