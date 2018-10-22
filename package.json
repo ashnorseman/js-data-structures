@@ -1,6 +1,6 @@
 {
   "name": "ash-js-tools",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Javascript data structures",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -14,7 +14,8 @@
     "testOnce": "jest --config jestconfig.json"
   },
   "keywords": [
-    "data-structure"
+    "javascript",
+    "toolkit"
   ],
   "author": "Ash Zhang",
   "license": "MIT",
