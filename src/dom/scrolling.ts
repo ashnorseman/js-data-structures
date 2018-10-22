@@ -18,7 +18,7 @@ export function findScrollingParents(el: HTMLElement): HTMLElement[] {
 
   while (parent) {
     if (parent.scrollHeight > parent.offsetHeight || parent.scrollWidth > parent.offsetWidth) {
-      result.push(el);
+      result.push(parent);
     }
 
     parent = parent.parentElement;
