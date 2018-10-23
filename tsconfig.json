@@ -2,7 +2,7 @@
   "compilerOptions": {
     "declaration": true,
     "downlevelIteration": true,
-    "lib": ["dom", "es5", "es2015.promise", "es2015.iterable"],
+    "lib": ["dom", "es5", "es2015.core", "es2015.iterable", "es2015.promise", "es2015.collection", "es2016.array.include"],
     "module": "commonjs",
     "outDir": "./lib",
     "sourceMap": true,
