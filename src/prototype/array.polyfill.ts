@@ -2,6 +2,7 @@
  * Array polyfills
  */
 
+/* tslint:disable:interface-name */
 interface Array<T> {
   insertAt(item: T, index: number): T[];
   merge(list: T[]): T[];
@@ -13,6 +14,7 @@ interface Array<T> {
   unshiftItem(item: T): T[];
   updateItem(key: string, data: any): T[];
 }
+/* tslint:enable */
 
 /**
  * Insert an item at an index number
