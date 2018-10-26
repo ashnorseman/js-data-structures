@@ -4,7 +4,9 @@
 
 /* tslint:disable:interface-name */
 interface Array<T> {
+  first(): T;
   insertAt(item: T, index: number): T[];
+  last(): T;
   merge(list: T[]): T[];
   pushItem(item: T): T[];
   removeAt(index: number): T[];
@@ -17,6 +19,13 @@ interface Array<T> {
 /* tslint:enable */
 
 /**
+ * First element in the array
+ */
+Array.prototype.first = function<T>(): T {
+  return this[0];
+};
+
+/**
  * Insert an item at an index number
  */
 Array.prototype.insertAt = function<T>(item: T, index: number): T[] {
@@ -25,6 +34,13 @@ Array.prototype.insertAt = function<T>(item: T, index: number): T[] {
   }
 
   return [...this.slice(0, index), item, ...this.slice(index)];
+};
+
+/**
+ * Last element in the array
+ */
+Array.prototype.last = function<T>(): T {
+  return this[this.length - 1];
 };
 
 /**

@@ -1,10 +1,20 @@
 import '../array.polyfill';
 
 describe('Array.prototype', () => {
+  it('first(): T', () => {
+    expect([1, 2].first()).toEqual(1);
+    expect([].first()).toEqual(undefined);
+  });
+
   it('insertAt(item: T, index: number): T[]', () => {
     expect([1, 2].insertAt(0, 0)).toEqual([0, 1, 2]);
     expect([1, 2].insertAt(0, 1)).toEqual([1, 0, 2]);
     expect([1, 2].insertAt(0, 2)).toEqual([1, 2, 0]);
+  });
+
+  it('last(): T', () => {
+    expect([1, 2].last()).toEqual(2);
+    expect([].last()).toEqual(undefined);
   });
 
   it('merge(list: T[]): T[]', () => {
