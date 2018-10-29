@@ -1,6 +1,6 @@
 import { deepExtend } from '../deep-extend';
 
-describe('deepExtend', () => {
+describe('deepExtend(source: any, target: any): any', () => {
   it('extends objects', () => {
     const src: any = {
       a: 1,

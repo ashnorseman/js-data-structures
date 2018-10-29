@@ -1,6 +1,6 @@
 import { inPolygon } from '../in-polygon';
 
-describe('inPolygon', () => {
+describe('inPolygon(point: IPoint, polygon: IPoint[]): boolean', () => {
   const list = [{ x: -1, y: 1 }, { x: 1, y: 1 }, { x: 1, y: -1 }, { x: -1, y: -1 }, { x: -1, y: 1 }];
 
   it('should test in polygon', () => {

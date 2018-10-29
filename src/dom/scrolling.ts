@@ -35,7 +35,7 @@ export function findScrollingParents(el: HTMLElement): HTMLElement[] {
   let parent: HTMLElement = el.parentElement;
 
   while (parent) {
-    if (parent.scrollHeight > parent.offsetHeight || parent.scrollWidth > parent.offsetWidth) {
+    if (parent.scrollHeight > parent.offsetHeight) {
       result.push(parent);
     }
 
@@ -56,10 +56,6 @@ export function stopScrolling(el: HTMLElement) {
   if (el.scrollHeight > el.offsetHeight) {
     el.style.borderRight = `${scrollbarWidth}px solid transparent`;
   }
-
-  if (el.scrollWidth > el.offsetWidth) {
-    el.style.borderBottom = `${scrollbarWidth}px solid transparent`;
-  }
 }
 
 /**
@@ -68,5 +64,4 @@ export function stopScrolling(el: HTMLElement) {
 export function restoreScrolling(el: HTMLElement) {
   el.style.overflow = '';
   el.style.borderRight = '';
-  el.style.borderBottom = '';
 }

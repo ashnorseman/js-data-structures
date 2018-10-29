@@ -4,7 +4,7 @@
 
 import { IPoint } from './i-point';
 
-export function inPolygon(point: IPoint, polygon: IPoint[]) {
+export function inPolygon(point: IPoint, polygon: IPoint[]): boolean {
   let c = false;
 
   for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i, i += 1) {

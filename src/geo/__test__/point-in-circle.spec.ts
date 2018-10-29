@@ -1,6 +1,6 @@
 import { pointInCircle } from '../point-in-circle';
 
-describe('pointInCircle', () => {
+describe('pointInCircle({ point, center, radius }: { point: IPoint; center: IPoint; radius: number }): boolean', () => {
   it('should test if one point is in a circle', () => {
     expect(
       pointInCircle({

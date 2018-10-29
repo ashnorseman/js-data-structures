@@ -1,6 +1,6 @@
 import { intersect } from '../intersect';
 
-describe('intersect', () => {
+describe('intersect(lineA: [IPoint, IPoint], lineB: [IPoint, IPoint]): boolean', () => {
   it('should test if two lines intersect', () => {
     expect(intersect([{ x: -1, y: 1 }, { x: 1, y: -1 }], [{ x: 1, y: 1 }, { x: -1, y: -1 }])).toEqual(true);
     expect(intersect([{ x: -1, y: 0 }, { x: 1, y: 0 }], [{ x: 0, y: 1 }, { x: 0, y: -1 }])).toEqual(true);

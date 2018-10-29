@@ -6,20 +6,20 @@
 import { IPoint } from './i-point';
 
 export function intersect(lineA: [IPoint, IPoint], lineB: [IPoint, IPoint]): boolean {
-  const x1 = lineA[0].x;
-  const y1 = lineA[0].y;
-  const x2 = lineA[1].x;
-  const y2 = lineA[1].y;
-  const x3 = lineB[0].x;
-  const y3 = lineB[0].y;
-  const x4 = lineB[1].x;
-  const y4 = lineB[1].y;
+  const x1: number = lineA[0].x;
+  const y1: number = lineA[0].y;
+  const x2: number = lineA[1].x;
+  const y2: number = lineA[1].y;
+  const x3: number = lineB[0].x;
+  const y3: number = lineB[0].y;
+  const x4: number = lineB[1].x;
+  const y4: number = lineB[1].y;
 
   // calculate determinants
-  const intersectX =
+  const intersectX: number =
     ((x1 * y2 - y1 * x2) * (x3 - x4) - (x1 - x2) * (x3 * y4 - y3 * x4)) /
     ((x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4));
-  const intersectY =
+  const intersectY: number =
     ((x1 * y2 - y1 * x2) * (y3 - y4) - (y1 - y2) * (x3 * y4 - y3 * x4)) /
     ((x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4));
 
