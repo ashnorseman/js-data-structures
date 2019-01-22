@@ -35,7 +35,7 @@ export function findScrollingParents(el: HTMLElement): HTMLElement[] {
   let parent: HTMLElement = el.parentElement;
 
   while (parent) {
-    if (parent.scrollHeight > parent.offsetHeight) {
+    if (parent.scrollHeight > parent.offsetHeight && getComputedStyle(parent).overflow !== 'hidden') {
       result.push(parent);
     }
 

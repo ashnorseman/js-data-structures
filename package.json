@@ -1,6 +1,6 @@
 {
   "name": "ash-js-tools",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Javascript data structures",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
