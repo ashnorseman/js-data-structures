@@ -7,7 +7,7 @@ import { defaultComparator } from '../utils/default-comparator';
 export function binarySearch<T>(
   sortedArray: T[],
   target: T,
-  comparator: (target: T, arrayItem: T) => number = defaultComparator,
+  comparator: (target: T, arrayItem: T) => number = defaultComparator
 ): number {
   if (!Array.isArray(sortedArray)) {
     return -1;

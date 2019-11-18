@@ -6,6 +6,6 @@ export class DoublyLinkedListNode<T> {
   constructor(
     public value: T,
     public prev: DoublyLinkedListNode<T> = null,
-    public next: DoublyLinkedListNode<T> = null,
+    public next: DoublyLinkedListNode<T> = null
   ) {}
 }

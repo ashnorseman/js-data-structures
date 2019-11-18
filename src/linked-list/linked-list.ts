@@ -143,7 +143,7 @@ export class LinkedList<T> implements Iterable<T> {
         if (currentNode) {
           const result = {
             done: false,
-            value: currentNode.value,
+            value: currentNode.value
           };
 
           currentNode = currentNode.next;
@@ -152,10 +152,10 @@ export class LinkedList<T> implements Iterable<T> {
         } else {
           return {
             done: true,
-            value: null,
+            value: null
           };
         }
-      },
+      }
     };
   }
 }

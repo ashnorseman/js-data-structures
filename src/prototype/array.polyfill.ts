@@ -131,7 +131,7 @@ Array.prototype.updateItem = function<T>(key: string, data: any): T[] {
 
   const updatedItem: T = new constructor({
     ...this[targetIndex],
-    ...data,
+    ...data
   });
 
   return this.removeAt(targetIndex).insertAt(updatedItem, targetIndex);
